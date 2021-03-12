@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+
+import tasks from '../data/tasks';
+
+import {FlatList} from '../components';
 
 const Page = (props) => {
+    
     return (
-        <h1>Minha lista de tarefas</h1>
+        <div>
+            <h1>Minha lista de tarefas</h1>
+            <FlatList data={tasks} />
+        </div>
     );
 }
 

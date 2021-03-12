@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Componente = (props) => {
-    return (
-        <h2>Componente FlatList</h2>
-    );
-}
+import ItemList from './ItemList';
+
+const Componente = props => {
+  return (
+    <ul>
+      {props.data.map( (item) => <ItemList item={item}/> )}
+    </ul>
+  );
+};
 
 export default Componente;

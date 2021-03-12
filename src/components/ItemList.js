@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Componente = (props) => {
+    const item = props.item;
+    const [completed, setIsCompleted] = useState(item.completed);
+
     return (
-        <h2>Componente ItemList</h2>
+        <li key={item.id} onClick={() => setIsCompleted(!completed)}>
+            <input type='checkbox' checked={completed} />
+            <label>{item.title}</label>
+        </li>
     );
 }
 
