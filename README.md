@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Aula de 12/03/2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Criar uma aplicação React e levantar um serviço
 
-In the project directory, you can run:
+```consose
+## Instalar o Yarn
+$ npm i -g yarn
 
-### `yarn start`
+## Criar uma aplicação React chamada tarefas
+$ npx create-react-app tarefas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Abrir aplicação React no Visual Studio Code
+$ code tarefas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Acessar o diretório da aplicação React
+$ cd tarefas
 
-### `yarn test`
+## Instalar biblioteca de rotas para páginas
+#### React Router 
+#### https://reactrouter.com/core/guides/quick-start
+$ yarn add react-router react-router-dom
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Componente para estilizar a app Material UI 
+#### https://material-ui.com/pt/
+$ yarn add @material-ui/core @material-ui/icons
 
-### `yarn build`
+$ yarn start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Criando diretórios e arquivos na aplicação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```console
+## criar diretório de dados e seu arquivo
+$ mkdir src/data
+$ touch src/data/tasks.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## criar diretório de componentes e seus arquivos
+$ mkdir src/components 
+#### sumário dos compenentes
+$ touch src/components/index.js 
+#### componentes
+$ touch src/components/Container.js 
+$ touch src/components/FlatList.js 
+$ touch src/components/ItemList.js
+$ touch src/components/NavBar.js 
 
-### `yarn eject`
+$ mkdir src/pages
+#### sumário dos páginas
+$ touch src/pages/index.js
+#### páginas
+$ touch src/pages/HomePage.js 
+$ touch src/pages/TaskPage.js
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## em src/App.js importar pages e codificar rotas
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Criar os componentes e programo o HomePage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Criar componentes de TaskPage ???
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Colocar dados (tarefas) estáticos em src/pages/HomePage.js
 
-## Learn More
+## Estilizar componentes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usar API para capturar dados (tarefas)
 
-### Code Splitting
+# Links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- https://reactjs.org
+- https://reactrouter.com/core/guides/quick-start
+- https://material-ui.com/pt/getting-started/installation/
+- https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+- http://jsonplaceholder.typicode.com/
+- https://github.com/axios/axios
